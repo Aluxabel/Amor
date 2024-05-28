@@ -11,8 +11,6 @@ cuerpo.
      <Guión:> 
          function declaracionDeAmor(event) { 
  if (event.key === "Enter" || event.type == "click") { 
-<<Div. class="corazon">💗
-<<Div. class="corazon">🧡
 
                     if (nombre === "marcos") {    
      para (var i = 0; i < 1000; i++) { 
@@ -45,15 +43,11 @@ cuerpo.
     </script>
 </Cabeza.>
 <cuerpo.>
-<<H1.>Declaración de Amor</H1.>
 <<Etiqueta. for="nombre">Pon tu nombre:</Etiqueta.>
 Entrada. 
     botón.     
 p. </.>>
 
-<!-- Imágenes de corazones -->
-Div. </Div.></Div.>
-<<Div. class="corazon">💗</Div.>class="corazon">💗</Div.>class="corazon">💗</Div.>div.>>>
- var mensaje = ""; </Div.>class="corazon">🧡
+
 </</
 </HTML.>>>
