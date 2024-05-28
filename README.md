@@ -32,7 +32,6 @@ function rechazo() {
 </script>
 </head>
 <body>
-<h1>Declaración de Amor</h1>
 <label for="nombre">Pon tu nombre:</label>
 <input type="text" id="nombre">
 <button onclick="declaracionDeAmor()">Declarar</button>
