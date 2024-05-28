@@ -1,12 +1,11 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Declaración de Amor</title>
 <script>
 function declaracionDeAmor() {
   var nombre = document.getElementById("nombre").value;
   var mensaje = "";
-  if (nombre.toLowerCase() === "william") {
+  if (nombre.toLowerCase() === "Marcos") {
     for (var i = 0; i < 1000; i++) {
       mensaje += "Te amo, ";
     }
