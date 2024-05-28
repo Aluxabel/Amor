@@ -18,6 +18,12 @@
                 mensaje += "¿Quieres ser mi novio? <button onclick='aceptacion()'>Sí</button> <button onclick='rechazo()'>No</button>";
             } else if (nombre.toLowerCase() === "alux") {
                 mensaje = "El amor de tu vida y el dueño de tu corazón.";
+            } else if (nombre.toLowerCase() === "sheyla") {
+                mensaje = "Sheyla, mi dulce amor, te amo con todo mi corazón. Eres la razón de mis sonrisas y mi felicidad. 💖";
+            } else if (nombre.toLowerCase() === "kevin") {
+                mensaje = "Kevin, I love you. Eres mi todo, mi razón de ser. ❤️";
+            } else if (nombre.toLowerCase() === "frida") {
+                mensaje = "Hola, Frida querida. TQM (Te quiero mucho) ❤️.";
             } else {
                 mensaje = "Vete a la vrg plis";
             }
@@ -36,7 +42,6 @@
     </script>
 </head>
 <body>
-<h1>Declaración de Amor</h1>
 <label for="nombre">Pon tu nombre:</label>
 <input type="text" id="nombre" onkeydown="if (event.key === 'Enter') declaracionDeAmor()">
 <button onclick="declaracionDeAmor()">Declarar</button>
