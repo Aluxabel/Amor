@@ -8,11 +8,7 @@
             var nombre = document.getElementById("nombre").value;
             var mensaje = "";
             if (nombre.toLowerCase() === "marcos") {
-                for (var i = 0; i < 1000; i++) {
-                    mensaje += "Te amo, ";
-                }
-                mensaje += "Te amo.\n";
-                mensaje += "Hola niño lindo hermoso, ¿cómo estás? ¿Sabes que me gustas mucho y te amo de verdad?\n";
+                mensaje = "Te amo, Marcos. Hola niño lindo hermoso, ¿cómo estás? ¿Sabes que me gustas mucho y te amo de verdad?\n";
                 mensaje += "Me gustaría que en algún momento llegáramos a ser novios.\n";
                 mensaje += "A veces de noche, cuando el mundo duerme, pienso en ti y me lleno de esperanza y amor.\n";
                 mensaje += "¿Quieres ser mi novio? <button onclick='aceptacion()'>Sí</button> <button onclick='rechazo()'>No</button>";
