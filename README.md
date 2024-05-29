@@ -12,7 +12,7 @@
                 mensaje += "Me gustaría que en algún momento llegáramos a ser novios.\n";
                 mensaje += "A veces de noche, cuando el mundo duerme, pienso en ti y me lleno de esperanza y amor.\n";
                 mensaje += "¿Quieres ser mi novio? <button onclick='aceptacion()'>Sí</button> <button onclick='rechazo()'>No</button>";
-            if (nombre.toLowerCase() === "maicos") {
+            } else if (nombre.toLowerCase() === "maicos") {
                 mensaje = "Te amo, Marcos. Hola niño lindo hermoso, ¿cómo estás? ¿Sabes que me gustas mucho y te amo de verdad?\n";
                 mensaje += "Me gustaría que en algún momento llegáramos a ser novios.\n";
                 mensaje += "A veces de noche, cuando el mundo duerme, pienso en ti y me lleno de esperanza y amor.\n";
