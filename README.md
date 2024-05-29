@@ -20,6 +20,10 @@
                 mensaje = "Kevin, I love you. Eres mi todo, mi razón de ser. ❤️";
             } else if (nombre.toLowerCase() === "frida") {
                 mensaje = "Hola, Frida querida. TQM (Te quiero mucho) ❤️.";
+            } else if (nombre.toLowerCase() === "david") {
+                mensaje = "Te quiero, muchas gracias por tu amistad y los buenos momentos contigo. :3";
+            } else if (nombre.toLowerCase() === "omar") {
+                mensaje = "Te quiero mucho, te mereces el mundo entero omi 💗";
             } else {
                 mensaje = "Vete a la vrg plis";
             }
