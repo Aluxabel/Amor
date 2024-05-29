@@ -15,7 +15,7 @@
             } else if (nombre.toLowerCase() === "maicos") {
                 mensaje = "Te amo, Marcos. Hola niño lindo hermoso, ¿cómo estás? ¿Sabes que me gustas mucho y te amo de verdad?\n";
                 mensaje += "Me gustaría que en algún momento llegáramos a ser novios.\n";
-                mensaje += "A veces de noche, cuando el mundo duerme, pienso en ti y me lleno de esperanza y amor.\n";
+     }           mensaje += "A veces de noche, cuando el mundo duerme, pienso en ti y me lleno de esperanza y amor.\n";
                 mensaje += "¿Quieres ser mi novio? <button onclick='aceptacion()'>Sí</button> <button onclick='rechazo()'>No</button>";
             } else if (nombre.toLowerCase() === "alux") {
                 mensaje = "El amor de tu vida y el dueño de tu corazón.";
@@ -31,7 +31,9 @@
                 mensaje = "Te quiero mucho, te mereces el mundo entero omi 💗";
             } else if (nombre.toLowerCase() === "dayana") {
                 mensaje = "Holi dayana, espero y estés muy bien, ten un excelente día, tqm. 💓
-            } else if (nombre.toLowerCase() === "Rodrigo" or "Aldahir") {
+            } else if (nombre.toLowerCase() === "Rodrigo") {
+                mensaje= "Te quiero mucho wey, espero y este muy bien 💞"
+            } else if (nombre.toLowerCase() === "Aldahir") {
                 mensaje= "Te quiero mucho wey, espero y este muy bien 💞"
             } else {
                 mensaje = "Vete a la vrg plis"
