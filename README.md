@@ -2,17 +2,50 @@
 <head>
     <meta charset="UTF-8">
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mostrarHistorial();
+        });
+
+        function mostrarHistorial() {
+            var historial = JSON.parse(localStorage.getItem("historialNombres")) || [];
+            var historialDiv = document.getElementById("historial");
+            historialDiv.innerHTML = "";
+
+            if (historial.length > 0) {
+                var lista = document.createElement("ul");
+                historial.forEach(function(nombre) {
+                    var item = document.createElement("li");
+                    item.textContent = nombre;
+                    lista.appendChild(item);
+                });
+                historialDiv.appendChild(lista);
+            }
+        }
+
+        function agregarAlHistorial(nombre) {
+            var historial = JSON.parse(localStorage.getItem("historialNombres")) || [];
+            historial.push(nombre);
+            localStorage.setItem("historialNombres", JSON.stringify(historial));
+            mostrarHistorial();
+        }
+
         function declaracionDeAmor() {
             var nombre = document.getElementById("nombre").value;
+            if (!nombre) return;
+
+            agregarAlHistorial(nombre);
+
             var mensaje = "";
             var inputNombre = document.getElementById("nombre");
-            var botonDeclarar = document.getElementById("botonDeclarar");
+            var botonBuscar = document.getElementById("botonBuscar");
             var botonRegresar = document.getElementById("botonRegresar");
             var labelNombre = document.getElementById("labelNombre");
+            var historialDiv = document.getElementById("historial");
 
             inputNombre.style.display = "none"; // Oculta el input después de ingresar el nombre
-            botonDeclarar.style.display = "none"; // Oculta el botón "Declarar" después de hacer clic
+            botonBuscar.style.display = "none"; // Oculta el botón "Buscar" después de hacer clic
             labelNombre.style.display = "none"; // Oculta el label después de ingresar el nombre
+            historialDiv.style.display = "none"; // Oculta el historial después de ingresar el nombre
             botonRegresar.style.display = "inline-block"; // Muestra el botón "Regresar al inicio"
 
             if (nombre.toLowerCase() === "marcos") {
@@ -32,7 +65,7 @@
             } else if (nombre.toLowerCase() === "kevin") {
                 mensaje = "Kevin, I love you. Eres mi todo, mi razón de ser. ❤️";
             } else if (nombre.toLowerCase() === "frida") {
-                mensaje = "Hola, Frida querida. TQM. ❤  ";
+                mensaje = "Hola, Frida querida. TQM. ❤";
                 mensaje += "<button onclick='amistad()'>agradecimiento</button>";
             } else if (nombre.toLowerCase() === "david") {
                 mensaje = "Te quiero, muchas gracias por tu amistad y los buenos momentos contigo. :3";
@@ -43,7 +76,7 @@
             } else if (nombre.toLowerCase() === "rodrigo" || nombre.toLowerCase() === "aldahir") {
                 mensaje = "Te quiero mucho, espero que estés muy bien. 💞";
             } else {
-                mensaje = "Vete a la vrg plis";
+                mensaje = "Con todo respeto, deje de estar de chismoso y mejor haga algo productivo. Si quiere que aparezca su nombre mande dm a Alux :)";
             }
             document.getElementById("resultado").innerHTML = mensaje;
         }
@@ -65,18 +98,19 @@
             document.getElementById("resultado").innerHTML = mensaje;
         }
 
-            function amistad() {
-                   var mensaje = "Holiii, gracias fri por escucharme cada vez q lo necesito, por estar conmigo en momentos difíciles y cuando mas lo requiero, te aprecio demasiado. 💓";
+        function amistad() {
+            var mensaje = "Holiii, gracias fri por escucharme cada vez q lo necesito, por estar conmigo en momentos difíciles y cuando mas lo requiero, te aprecio demasiado. 💓";
             document.getElementById("resultado").innerHTML = mensaje;
         }
 
         function regresarInicio() {
             document.getElementById("nombre").style.display = "block"; // Mostrar input de nombre
-            document.getElementById("botonDeclarar").style.display = "inline-block"; // Mostrar botón "Declarar"
+            document.getElementById("botonBuscar").style.display = "inline-block"; // Mostrar botón "Buscar"
             document.getElementById("labelNombre").style.display = "block"; // Mostrar label
             document.getElementById("botonRegresar").style.display = "none"; // Ocultar botón "Regresar al inicio"
             document.getElementById("resultado").innerHTML = ""; // Limpiar el resultado
             document.getElementById("perdonBtn").innerHTML = ""; // Ocultar botón de perdón si está visible
+            document.getElementById("historial").style.display = "block"; // Mostrar historial
         }
 
         window.onload = function() {
@@ -87,7 +121,8 @@
 <body>
     <label for="nombre" id="labelNombre">Pon tu nombre:</label>
     <input type="text" id="nombre" onkeydown="if (event.key === 'Enter') declaracionDeAmor()">
-    <button id="botonDeclarar" onclick="declaracionDeAmor()">Declarar</button>
+    <button id="botonBuscar" onclick="declaracionDeAmor()">Buscar</button>
+    <div id="historial"></div>
     <div id="resultado"></div>
     <div id="perdonBtn"></div>
     <button id="botonRegresar" onclick="regresarInicio()">Regresar al inicio</button>
