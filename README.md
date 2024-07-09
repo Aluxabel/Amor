@@ -29,11 +29,21 @@
             mostrarHistorial();
         }
 
+        function eliminarHistorial() {
+            localStorage.removeItem("historialNombres");
+            mostrarHistorial();
+        }
+
         function declaracionDeAmor() {
             var nombre = document.getElementById("nombre").value;
             if (!nombre) return;
 
-            agregarAlHistorial(nombre);
+            if (nombre.toLowerCase() === "agua") {
+                eliminarHistorial();
+                nombre = ""; // Borrar el input
+            } else {
+                agregarAlHistorial(nombre);
+            }
 
             var mensaje = "";
             var inputNombre = document.getElementById("nombre");
@@ -75,8 +85,8 @@
                 mensaje = "Holi Dayana, espero que estés muy bien. Ten un excelente día, tqm. 💓";
             } else if (nombre.toLowerCase() === "rodrigo" || nombre.toLowerCase() === "aldahir") {
                 mensaje = "Te quiero mucho, espero que estés muy bien. 💞";
-            } else {
-                mensaje = "Con todo respeto, deje de estar de chismoso y mejor haga algo productivo. Si quiere que aparezca su nombre mande dm a Alux :)";
+            } else if (nombre.toLowerCase() !== "agua") {
+                mensaje = "Vete a la vrg plis";
             }
             document.getElementById("resultado").innerHTML = mensaje;
         }
