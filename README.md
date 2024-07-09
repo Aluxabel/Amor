@@ -86,7 +86,7 @@
             } else if (nombre.toLowerCase() === "rodrigo" || nombre.toLowerCase() === "aldahir") {
                 mensaje = "Te quiero mucho, espero que estés muy bien. 💞";
             } else if (nombre.toLowerCase() !== "agua") {
-                mensaje = "Vete a la vrg plis";
+                mensaje = "Con todo respeto, deje de estar de chismoso y mejor haga algo productivo. Si quiere que aparezca su nombre mande dm a Alux :)";
             }
             document.getElementById("resultado").innerHTML = mensaje;
         }
