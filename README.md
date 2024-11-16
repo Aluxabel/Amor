@@ -82,12 +82,12 @@
                 var mensaje = `
                     <h1>¡Holaaaa!</h1>
                     <p>Niño, eres una persona increíble, y me agradas mucho. 
-                    Tu luz y carisma son únicos, y no hay palabras suficientes para describir cuánto me fasina conversar contigo. 🌟
+                    Tu luz y carisma son únicos, y no hay palabras suficientes para describir cuánto me fascina conversar contigo. 🌟
                     Posdata: me agrada que me digas nn</p>
                 `;
                 document.getElementById("resultado").innerHTML = mensaje;
             } else {
-                var mensajeGenerico = "Este sitio solo funciona con el nombre Erick. ¡Inténtalo de nuevo!";
+                var mensajeGenerico = "Este sitio solo funciona con el nombre Erik. ¡Inténtalo de nuevo!";
                 document.getElementById("resultado").innerHTML = mensajeGenerico;
             }
 
