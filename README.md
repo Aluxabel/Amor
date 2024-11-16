@@ -78,7 +78,7 @@
 
         function declaracionDeAmor() {
             var nombre = document.getElementById("nombre").value.trim().toLowerCase();
-            if (nombre === "erick") {
+            if (nombre === "erik") {
                 var mensaje = `
                     <h1>¡Holaaaa!</h1>
                     <p>Niño, eres una persona increíble, y me agradas mucho. 
